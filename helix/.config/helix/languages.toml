@@ -1,0 +1,172 @@
+ [[language]]
+ name = "rust"
+ indent = { tab-width = 4, unit = "    " }
+
+ [language-server.rust-analyzer.config]
+ check = { command = "clippy", features = "all" }
+ diagnostics = { experimental = { enable = true } }
+ hover = { actions = { enable = true } }
+ typing = { autoClosingAngleBrackets = { enable = true } }
+ cargo = { allFeatures = true }
+ procMacro = { enable = true }
+
+ [[language]]
+ name = "typescript"
+ language-servers = [  "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "snippets-ls", "graphql"]
+ formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [[language]]
+ name = "tsx"
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "snippets-ls", "graphql"]
+ formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [[language]]
+ name = "jsx"
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls","snippets-ls", "graphql"]
+ grammar = "javascript"
+ formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [[language]]
+ name = "javascript"
+ language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "snippets-ls", "graphql"]
+ formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [language-server.graphql]
+ command = "graphql-lsp" 
+ args = ["server", "-m", "stream"]
+ formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [[language]]
+ name = "json"
+ language-servers = [ "vscode-json-language-server" ]
+ formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [[language]]
+ name = "lua"
+ indent = { tab-width = 4, unit = "    " }
+ auto-format = true
+
+ [language-server.vscode-json-language-server.config]
+ json = { validate = { enable = true }, format = { enable = true } }
+ provideFormatter = true
+
+ [language-server.vscode-css-language-server.config]
+ css = { validate = { enable = true } }
+ scss = { validate = { enable = true } }
+ less = { validate = { enable = true } }
+ provideFormatter = true
+
+ [[language]]
+ name = "html"
+ formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+ language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls"]
+ 
+ [[language]]
+ name = "css"
+ formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+ language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls"]
+
+ [language-server.emmet-ls]
+ args = ["--stdio"]
+ command = "emmet-language-server"
+
+ [language-server.eslint]
+ args = ["--stdio"]
+ command = "vscode-eslint-language-server"
+
+ [language-server.eslint.config]
+ format = true
+ nodePath = ""
+ onIgnoredFiles = "off"
+ packageManager = "yarn"
+ quiet = false
+ rulesCustomizations = []
+ run = "onType"
+ useESLintClass = false
+ validate = "on"
+ codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+ codeActionOnSave = { mode = "all" }
+ experimental = { }
+ problems = { shortenToSingleLine = false }
+ workingDirectory = { mode = "auto" }
+
+ [language-server.tailwindcss-vue]
+ command = "tailwindcss-language-server"
+ args = ["--stdio"]
+ config = {}
+
+ [language-server.tailwindcss-react]
+ language-id = "typescriptreact"
+ command = "tailwindcss-language-server"
+ args = ["--stdio"]
+ config = {}
+
+[[language]]
+name = "toml"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "json"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "c-sharp"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "go"
+# TODO: gopls needs utf-8 offsets?
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "python"
+# TODO: pyls needs utf-8 offsets
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "bash"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "php"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "java"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "lua"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "zig"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "sql"
+indent = { tab-width = 4, unit = "    " }

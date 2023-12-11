@@ -1,0 +1,50 @@
+theme = "gruvbox"
+
+[editor]
+scrolloff = 8
+mouse = false
+line-number = "relative"
+cursorline = false
+true-color = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.statusline]
+# left = ["mode", "spinner", "version-control", "file-name"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "spinner",  "file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = false
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = false
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 0
+
+# KEYMAPS
+[keys.normal]
+"C-/" = "toggle_comments"
+"C-h" = "jump_view_left"
+"C-l" = "jump_view_right"
+"C-k" = "jump_view_up"
+"C-j" = "jump_view_down"
+"L" = "goto_line_end"
+"H" = "goto_line_start"
+
+[keys.select]
+"C-/" = "toggle_comments"
