@@ -1,7 +1,7 @@
 return {
     'mbbill/undotree',
-    lazy = false,
+    event = "VimEnter",
     config = function ()
-        vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = "Undotree"})
+        vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
     end
 }

@@ -8,8 +8,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 0
+vim.g.loaded_netrwPlugin = 0
 
 -- Cursor
 opt.guicursor = {
@@ -52,7 +52,7 @@ opt.iskeyword:append("-")
 opt.mouse:append('a')
 opt.modifiable = true
 opt.encoding = "UTF-8"
-opt.updatetime = 50
+opt.updatetime = 100
 
 -- Undo
 opt.swapfile = false
