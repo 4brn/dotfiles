@@ -58,5 +58,8 @@ keymap.set("n", "N", "Nzzzv", opts)
 -- Saves the changes of vertial editing when exiting with Ctrl + c
 keymap.set("i", "<C-c>", "<Esc>", opts)
 
+-- Map Esp to exit terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
 -- Do not press Q
 keymap.set("n", "Q", "<nop>", opts)
