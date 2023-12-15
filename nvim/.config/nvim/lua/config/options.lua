@@ -1,64 +1,118 @@
-local opt = vim.opt
+-----------------------------------------------------------
+-- General Neovim settings and configuration
+-----------------------------------------------------------
 
--- see ":set all" for all available options.
--- see ":options"
+-- Default options are not included
+-- See: https://neovim.io/doc/user/vim_diff.html
+-- [2] Defaults - *nvim-defaults*
 
--- Leader
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+local g = vim.g       -- Global variables
+local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 
--- Netrw
-vim.g.loaded_netrw = 0
-vim.g.loaded_netrwPlugin = 0
+-----------------------------------------------------------
+-- General
+-----------------------------------------------------------
+g.mapleader = ' '
+g.maplocalleader = ' '
+opt.mouse = ''                        -- Enable mouse support
+opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
+opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
+opt.encoding = "utf-8"
 
--- Cursor
-opt.guicursor = {
-    'n-v-c:block-Cursor',
-    'i-ci:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100',
-    'r:hor50-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100'
-}
-
--- Appearance
-opt.number = true
-opt.relativenumber = true
-opt.termguicolors = true
-opt.signcolumn = "yes"
+-----------------------------------------------------------
+-- Neovim UI
+-----------------------------------------------------------
+opt.number = true           -- Show line number
+opt.relativenumber = true   -- Show relative line number
+opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.scrolloff = 8
-opt.completeopt = "menuone,noinsert,noselect"
+opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
+opt.signcolumn = 'no'
+opt.splitright = true       -- Vertical split to the right
+opt.splitbelow = true       -- Horizontal split to the bottom
+opt.laststatus=3            -- Set global statusline
 
--- Tabs and indentaion
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
-opt.shiftround = true
-opt.expandtab = true
-opt.wrap = false
-opt.smartindent = true
-
+-----------------------------------------------------------
 -- Search
+-----------------------------------------------------------
 opt.incsearch = true
-opt.ignorecase = true
-opt.smartcase = true
+opt.ignorecase = true       -- Ignore case letters when search
+opt.smartcase = true        -- Ignore lowercase for the whole pattern
 opt.hlsearch = false
 
--- Behaviour
-opt.hidden = true
-opt.errorbells = true
-opt.backspace = "indent,eol,start"
-opt.splitright = true
-opt.splitbelow = true
-opt.autochdir = false
-opt.iskeyword:append("-")
-opt.mouse:append('a')
-opt.modifiable = true
-opt.encoding = "UTF-8"
-opt.updatetime = 100
+-----------------------------------------------------------
+-- Cursor
+-----------------------------------------------------------
+opt.guicursor = {
+    'n-v-c:block-Cursor',
+    'i-ci:block-Cursor',
+    'r:hor50-Cursor'
+}
 
+-----------------------------------------------------------
+-- Tabs, indent
+-----------------------------------------------------------
+opt.tabstop = 4             -- 1 tab == 4 spaces
+opt.shiftwidth = 4          -- Shift 4 spaces when tab
+-- opt.softtapstop = 4
+opt.expandtab = true        -- Use spaces instead of tabs
+opt.shiftround = true
+opt.expandtab = true
+opt.wrap = false            -- Wrap Text
+opt.smartindent = true      -- Autoindent new lines
+
+-----------------------------------------------------------
 -- Undo
-opt.swapfile = false
+-----------------------------------------------------------
+opt.swapfile = false                  -- Don't use swapfile
 opt.backup = false
-opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.undofile = true
+opt.undodir = vim.fn.expand("~/.vim/undodir")
 
--- Clipboard
-opt.clipboard = 'unnamedplus'
+-----------------------------------------------------------
+-- Memory, CPU
+-----------------------------------------------------------
+opt.hidden = true           -- Enable background buffers
+opt.history = 100           -- Remember N lines in history
+opt.lazyredraw = true       -- Faster scrolling
+opt.synmaxcol = 240         -- Max column for syntax highlight
+opt.updatetime = 50         -- ms to wait for trigger an event
+
+-----------------------------------------------------------
+-- Startup
+-----------------------------------------------------------
+-- Disable nvim intro
+opt.shortmess:append "sI"
+
+-- -- Disable builtin plugins
+local disabled_built_ins = {
+   "2html_plugin",
+   "getscript",
+   "getscriptPlugin",
+   "gzip",
+   "logipat",
+   -- "netrw",
+   -- "netrwPlugin",
+   -- "netrwSettings",
+   -- "netrwFileHandlers",
+   "matchit",
+   "tar",
+   "tarPlugin",
+   "rrhelper",
+   "spellfile_plugin",
+   "vimball",
+   "vimballPlugin",
+   "zip",
+   "zipPlugin",
+   -- "tutor",
+   "rplugin",
+   "synmenu",
+   "optwin",
+   "compiler",
+   "bugreport",
+   "ftplugin",
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+   g["loaded_" .. plugin] = 1
+end

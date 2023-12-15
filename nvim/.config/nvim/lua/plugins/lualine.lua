@@ -1,6 +1,7 @@
 return {
     "nvim-lualine/lualine.nvim",
-    event = { 'BufReadPre', 'BufNewFile' },
+    -- event = { 'BufReadPre', 'BufNewFile' },
+    event = "VimEnter",
     config = function()
         require("lualine").setup({
             options = {
