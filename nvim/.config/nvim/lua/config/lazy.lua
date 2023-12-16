@@ -15,9 +15,6 @@ local opts = {
     defaults = {
         lazy = true,
     },
-    install = {
-        colorscheme = { "catppuccin" }
-    },
     checker = {
         enabled = true,
         notify = false,
