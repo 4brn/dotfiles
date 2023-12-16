@@ -25,9 +25,9 @@ return {
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'hrsh7th/cmp-buffer' },   -- Required
             { 'hrsh7th/cmp-path' },     -- Required
-            { 'saadparwaiz1/cmp_luasnip' },
             { 'L3MON4D3/LuaSnip' },     -- Required
-            { 'rafamadriz/friendly-snippets' },
+            -- { 'saadparwaiz1/cmp_luasnip' },
+            -- { 'rafamadriz/friendly-snippets' },
         },
         config = function()
             local lsp_zero = require('lsp-zero')
@@ -72,11 +72,11 @@ return {
             require('luasnip.loaders.from_vscode').lazy_load()
 
             cmp.setup({
-                snippet = {
-                    expand = function(args)
-                        luasnip.lsp_expand(args.body)
-                    end
-                },
+                -- snippet = {
+                --     expand = function(args)
+                --         luasnip.lsp_expand(args.body)
+                --     end
+                -- },
                 mapping = cmp.mapping.preset.insert({
                     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
                     ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
@@ -104,7 +104,7 @@ return {
                 }),
                 sources = {
                     { name = 'nvim_lsp' },
-                    { name = 'luasnip' },
+                    -- { name = 'luasnip' },
                     { name = 'path' },
                     { name = 'buffer' },
                     { name = 'nvim_lua' },
