@@ -26,8 +26,8 @@ opt.number = true           -- Show line number
 opt.relativenumber = true   -- Show relative line number
 opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.scrolloff = 8
--- opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
-opt.signcolumn = 'no'
+opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
+opt.signcolumn = 'yes'
 opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
 opt.laststatus=3            -- Set global statusline
@@ -91,10 +91,10 @@ local disabled_built_ins = {
    "getscriptPlugin",
    "gzip",
    "logipat",
-   -- "netrw",
-   -- "netrwPlugin",
-   -- "netrwSettings",
-   -- "netrwFileHandlers",
+   "netrw",
+   "netrwPlugin",
+   "netrwSettings",
+   "netrwFileHandlers",
    "matchit",
    "tar",
    "tarPlugin",
