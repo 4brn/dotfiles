@@ -4,17 +4,14 @@ local opts = { noremap = true, silent = true }
 -- Lazy-nvim
 keymap.set("n", "<leader>l", vim.cmd.Lazy)
 
--- ToggleTerm
--- keymap.set("n", "<leader>t", vim.cmd.ToggleTerm)
-
 -- Format
-vim.keymap.set({ "v", "n" }, "<leader>f", vim.lsp.buf.format, { remap = false })
+vim.keymap.set({ "v", "n" }, "<leader>f", vim.lsp.buf.format, opts)
 
 -- Copy into host system clipboard with <leader>y
--- keymap.set('v', '<leader>y', '"*y', opts)
+keymap.set('v', '<leader>y', '"*y', opts)
 
 -- Remaps to delete/cut to system clipboard
--- keymap.set("n", "<leader>d", "\"_d", { desc = "Delete/Cut to system clipboard" })
+keymap.set("n", "<leader>d", "\"_d", opts)
 
 -- Allows pasting over selection without losing the copied text
 keymap.set("v", "<leader>p", "\"_dP", opts)

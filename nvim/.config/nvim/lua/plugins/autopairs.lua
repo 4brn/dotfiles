@@ -4,7 +4,4 @@ return {
         event = 'InsertEnter',
         opts = {}
     },
-    {
-        -- 'windwp/nvim-ts-autotag',
-    },
 }
