@@ -16,7 +16,7 @@ return {
             { 'neovim/nvim-lspconfig' }, -- Required
             {
                 'williamboman/mason.nvim',
-                build = 'MasonUpdate',
+                -- build = 'MasonUpdate',
             },                                       -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
