@@ -7,7 +7,7 @@ bold_font        auto
 italic_font      auto
 bold_italic_font auto
 
-font_size 13.0
+font_size 14.0
 disable_ligatures never
 
 # Cursor
@@ -27,7 +27,7 @@ sync_to_monitor yes
 scrollback_lines 2000
 remember_window_size  yes
 copy_on_select no
-background_opacity 1 
+background_opacity 0.9 
 hide_window_decorations titlebar-only
 linux_display_server x11
 
@@ -38,6 +38,6 @@ term xterm-256color
 
 
 # BEGIN_KITTY_THEME
-# Nord
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME
