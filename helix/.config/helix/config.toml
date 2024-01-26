@@ -1,4 +1,4 @@
-theme = "gruvbox_dark_soft"
+theme = "rose_pine"
 
 [editor]
 scrolloff = 8
@@ -6,7 +6,7 @@ mouse = true
 line-number = "relative"
 cursorline = false
 true-color = true
-bufferline = "multiple"
+bufferline = "never"
 color-modes = true
 
 [editor.statusline]
@@ -14,7 +14,7 @@ color-modes = true
 # right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 left = ["mode", "spinner",  "file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
+separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
