@@ -4,15 +4,15 @@ theme = "gruvbox_dark_soft"
 scrolloff = 8
 mouse = true
 line-number = "relative"
-cursorline = false
 true-color = true
-bufferline = "multiple"
 color-modes = true
+bufferline = "never"
+idle-timeout = 0
+auto-completion = true # !!!
+completion-trigger-len = 1
 
 [editor.statusline]
-# left = ["mode", "spinner", "version-control", "file-name"]
-# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-left = ["mode", "spinner",  "file-name"]
+left = ["mode", "spinner", "version-control", "file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
@@ -20,8 +20,12 @@ mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [editor.lsp]
+enable = true # !!!
 display-messages = true
 display-inlay-hints = false
+
+# parameter hints
+auto-signature-help = true # !!!
 
 [editor.cursor-shape]
 insert = "block"
