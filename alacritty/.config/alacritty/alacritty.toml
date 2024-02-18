@@ -19,11 +19,14 @@
 # https://github.com/alacritty/alacritty/tree/master#configuration
 import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 
+[env]
+term = "xterm-256color"
+
 [window]
 
 opacity = 1
 
-padding.x = 10
+padding.x = 5
 padding.y = 0
 dynamic_padding = true
 
