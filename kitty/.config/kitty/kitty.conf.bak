@@ -29,7 +29,7 @@ remember_window_size  yes
 copy_on_select no
 background_opacity 1
 hide_window_decorations titlebar-only
-# window_padding_width 10
+window_padding_width 10
 linux_display_server x11
 
 allow_remote_control yes
@@ -37,6 +37,6 @@ remote_kitty if-needed
 term xterm-256color
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME
