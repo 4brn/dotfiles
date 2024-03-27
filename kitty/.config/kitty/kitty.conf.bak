@@ -2,12 +2,12 @@ vim:fileencoding=utf-8:foldmethod=marker
 # vim:ft=kitty
 
 # Font
-font_family      CommitMono Nerd Font
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
+font_family      CommitMono 
+bold_font        CommitMono Bold
+italic_font      CommitMono Italic
+bold_italic_font CommitMono Bold Italic
 
-font_size 14.0
+font_size 16.0
 disable_ligatures never
 
 # Cursor
@@ -19,9 +19,9 @@ open_url_with firefox
 detect_urls yes
 
 # Performance
-repaint_delay 10
+repaint_delay 5
 input_delay 3
-sync_to_monitor yes
+sync_to_monitor no
 
 # Misc
 scrollback_lines 2000
@@ -29,14 +29,11 @@ remember_window_size  yes
 copy_on_select no
 background_opacity 1
 hide_window_decorations titlebar-only
-window_padding_width 10
-linux_display_server x11
+# window_padding_width 10
+# linux_display_server x11
 
 allow_remote_control yes
 remote_kitty if-needed
 term xterm-256color
 
-# BEGIN_KITTY_THEME
-# Gruvbox Dark
-include current-theme.conf
 # END_KITTY_THEME

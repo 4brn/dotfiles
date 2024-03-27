@@ -111,4 +111,4 @@ alias aptdate='sudo apt update && sudo apt upgrade -y'
 #   fi
 # fi
 
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
