@@ -17,30 +17,33 @@
 # Below is my initial set-up. The TOML homepage (https://toml.io/en/v1.0.0) was very helpful in figuring this out. 
 # I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
 # https://github.com/alacritty/alacritty/tree/master#configuration
-import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
+# import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 
-[env]
-term = "xterm-256color"
+live_config_reload = true
+
+# [env]
+# term = "xterm-256color"
 
 [window]
 
 opacity = 1
 
-padding.x = 5
+padding.x = 0
 padding.y = 0
 dynamic_padding = true
 
 decorations = "Full"
 decorations_theme_variant = "Dark" # "Dark"
+startup_mode = "Maximized"
 
 [font]
 
-normal.family = "CommitMono Nerd Font"
-bold.family = "CommitMono Nerd Font"
-italic.family = "CommitMono Nerd Font"
-bold_italic.family = "CommitMono Nerd Font"
+normal.family = "JetBrainsMono Nerd Font Mono"
+bold.family = "JetBrainsMono Nerd Font Mono"
+italic.family = "JetBrainsMono Nerd Font Mono"
+bold_italic.family = "JetBrainsMono Nerd Font Mono"
 
-size = 14.0
+size = 12.0
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
 # Google to test colors before setting a value, or simply using an editor such as VS Code where colors are displayed in a 

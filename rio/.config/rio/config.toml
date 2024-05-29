@@ -76,7 +76,7 @@ blinking-cursor = false
 # Linux/BSD: fork processes
 #
 # Example:
-# use-fork = false
+use-fork = false
 
 # Window configuration
 #
@@ -217,7 +217,7 @@ size = 24
 [navigation]
 mode = "CollapsedTab"
 clickable = false
-use-current-path = false
+use-current-path = true
 color-automation = []
 
 # Shell
