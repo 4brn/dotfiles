@@ -30,12 +30,12 @@ include /etc/sway/config-vars.d/*
 #
 
 output * {
-    bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    # bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     resolution 2256x1504@59.999Hz
     position 0,0
-    scale 1.5
+    scale 1.2
     subpixel rgb
-    # max_render_time 5
+    max_render_time 1
     adaptive_sync on
     render_bit_depth 8
 }

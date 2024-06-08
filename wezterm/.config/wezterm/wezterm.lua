@@ -2,15 +2,15 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.front_end = "OpenGL"
-config.max_fps = 250
-config.enable_wayland = false
+config.max_fps = 150
+config.enable_wayland = true
 config.freetype_load_target = "Normal"
 config.dpi = 96
 config.font = wezterm.font_with_fallback({
 	family = "JetBrainsMono Nerd Font Mono",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
-config.font_size = 14
+config.font_size = 13
 -- config.color_scheme = "Tango (terminal.sexy)" -- "GitHub Dark"
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
