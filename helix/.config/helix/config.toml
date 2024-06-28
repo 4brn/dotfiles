@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "darcula"
 
 [editor]
 scrolloff = 8
