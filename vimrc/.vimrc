@@ -68,11 +68,11 @@ set showcmd
 " Searching
 " nnoremap / /\v
 " vnoremap / /\v
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set showmatch
+" set hlsearch
+" set incsearch
+" set ignorecase
+" set smartcase
+" set showmatch
 map ',' :let @/=''<cr> " clear search
 
 " Remap help key.
