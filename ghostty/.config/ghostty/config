@@ -1,0 +1,30 @@
+font-family = 
+# font-style = Regular
+font-size = 22
+font-thicken = false
+
+fullscreen = true
+
+# keybind = ctrl+d=new_split:right 
+
+adjust-underline-position = 40%
+adjust-underline-thickness = -60%
+
+cursor-style = block
+cursor-style-blink = false
+
+shell-integration = bash
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+# keybind = ctrl+d=new_split:right
+
+# background-opacity = 0.9
+
+# window-width = 120
+# window-height = 45
+# window-padding-x = 4
+
+confirm-close-surface = false
+clipboard-paste-protection = false
+theme = GruvboxDarkHard 
