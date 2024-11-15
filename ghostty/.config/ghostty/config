@@ -1,6 +1,12 @@
+theme = Wez
+# "iTerm2 Default"
+# "Monokai Remastered"
+# "GitHub Dark"
+# GruvboxDarkHard 
+
 font-family = 
-# font-style = Regular
-font-size = 22
+font-style = Regular
+font-size = 24
 font-thicken = false
 
 fullscreen = true
@@ -27,4 +33,3 @@ mouse-hide-while-typing = true
 
 confirm-close-surface = false
 clipboard-paste-protection = false
-theme = GruvboxDarkHard 
