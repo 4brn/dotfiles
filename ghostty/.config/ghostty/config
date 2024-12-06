@@ -6,12 +6,10 @@ theme = Wez
 
 font-family = 
 font-style = Regular
-font-size = 24
+font-size = 22
 font-thicken = false
 
-fullscreen = true
-
-# keybind = ctrl+d=new_split:right 
+fullscreen = false
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
