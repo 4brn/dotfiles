@@ -6,7 +6,8 @@ theme = GruvboxDarkHard
 # "iTerm2 Default"
 # "Monokai Remastered"
 
-font-family =
+# "Iosevka Nerd Font"
+font-family = 
 font-style = Regular
 font-size = 22
 font-thicken = false

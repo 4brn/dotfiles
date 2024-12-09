@@ -1,41 +1,80 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "height": 30,
+  "spacing": 8,
+  "modules-left": [
+    "hyprland/workspaces",
+  ],
+  "modules-center": [
+    //"hyprland/window"
+    "clock"
+  ],
+  "modules-right": [
+    "temperature",
+    "memory",
+    "cpu",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+  "tray": {
+    // "icon-size": 21,
+    //"spacing": 10
+  },
   "clock": {
-    "format": "{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 1,
+    //"format": "{:%a %d %H:%M:%S}",
+    "format": "{:%e %b %T} ",
+    //"tooltip-format": "{:%e %B %Y}"
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
     "states": {
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
-    "format": "<span size='13000'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' >{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' >{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' > </span>{capacity}%",
-    "format-plugged": "<span size='13000' > </span>{capacity}%",
-    "format-alt": "<span size='13000' >{icon} </span> {time}",
-    "format-full": "<span size='13000' > </span>{capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}",
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' >  </span>{essid}",
-    "format-ethernet": "<span size='13000' >󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' >  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
-    //"on-click": "nm-connection-editor",
+    "format-wifi": "  {essid}",
+    "tooltip-format-wifi": "Strength: {signalStrength}%",
+    "format-ethernet": "  {ipaddr}/{cidr}",
+    "tooltip-format": "  {ifname} via {gwaddr}",
+    "format-linked": "  {ifname} (No IP)",
+    "format-disconnected": "  Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "",
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
     "format-icons": {
-      "default": ["", "", " "],
+      "default": [
+        "",
+        "",
+        " "
+      ]
     },
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "format": " {percent}%"
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true,
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
   },
 }
