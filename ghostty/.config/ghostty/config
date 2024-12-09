@@ -1,15 +1,18 @@
-theme = Wez
+theme = GruvboxDarkHard 
+# Wez
+# "Tomorrow Night"
+# catppuccin-mocha
+# "GitHub Dark"
 # "iTerm2 Default"
 # "Monokai Remastered"
-# "GitHub Dark"
-# GruvboxDarkHard 
 
-font-family = 
+font-family =
 font-style = Regular
 font-size = 22
 font-thicken = false
 
 fullscreen = false
+gtk-titlebar = false
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%

@@ -1,0 +1,9 @@
+mode=drun
+prompt=
+allow_images=false
+image_size=30
+hide_scroll=true
+normal_window=false
+insensitive=true
+width=600
+height=400
