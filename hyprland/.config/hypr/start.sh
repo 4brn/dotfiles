@@ -1,7 +1,7 @@
 #!/usr/bin/bash 
 
 # Start auth daemon
-systemctl --user start hyprpolkitagent
+# systemctl --user start hyprpolkitagent
 
 # Init wallpapper daemon
 hyprpaper &

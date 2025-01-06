@@ -12,6 +12,8 @@ window#waybar {
     color: @fg4;
     transition-property: background-color;
     transition-duration: 0.1s;
+    border: 0px;
+    border-radius: 0px
 }
 
 /* Base button styling */
@@ -53,7 +55,7 @@ button:hover {
 #temperature,
 #backlight,
 #memory {
-    background-color: @bg;
+    background-color: transparent;
     padding: 0 8px;
     border-radius: 4px;
     margin-top: 4px;
@@ -63,7 +65,6 @@ button:hover {
 /* Clock modules */
 #clock {
     background-color: @bg_h;
-    /*color: @fg;*/
 }
 
 #clock.date {
@@ -113,11 +114,6 @@ button:hover {
 #temperature {
     color: @orange;
 }
-
-/*#custom-vpn {*/
-/*    color: @aqua;*/
-/*}*/
-
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {

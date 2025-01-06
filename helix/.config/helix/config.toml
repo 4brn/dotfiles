@@ -1,24 +1,23 @@
-theme = "varua"
+theme = "ayu_dark"
 
 [editor]
 scrolloff = 8
 mouse = true
-line-number = "relative"
+line-number = "absolute"
 true-color = false
 color-modes = true
-rulers = [80]
-bufferline = "multiple" # never
+bufferline = "never" # multiple
 
-# idle-timeout = 0
+idle-timeout = 0
 completion-trigger-len = 1
 
-# [editor.statusline]
+[editor.statusline]
 # left = ["mode", "spinner", "version-control", "file-name"]
 # right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 # separator = "|"
-# mode.normal = "NORMAL"
-# mode.insert = "INSERT"
-# mode.select = "SELECT"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.lsp]
 enable = true
