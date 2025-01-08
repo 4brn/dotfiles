@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "height": 30,
+  "height": 25,
   "spacing": 8,
   "modules-left": [
     "hyprland/workspaces",
@@ -10,9 +10,9 @@
     "clock"
   ],
   "modules-right": [
-    "temperature",
-    "memory",
-    "cpu",
+    // "temperature",
+    // "memory",
+    // "cpu",
     "backlight",
     "pulseaudio",
     "network",
@@ -25,8 +25,8 @@
   },
   "clock": {
     "interval": 1,
-    //"format": "{:%a %d %H:%M:%S}",
-    "format": "{:%e %b %T} ",
+    "format": "{:%a %d %H:%M:%S}",
+    // "format": "{:%e %b} ", //"{:%e %b %T} "
     //"tooltip-format": "{:%e %B %Y}"
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },

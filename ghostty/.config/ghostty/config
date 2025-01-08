@@ -7,30 +7,23 @@ theme = GruvboxDarkHard
 # "Monokai Remastered"
 
 font-family =
-font-style = Regular
+font-style = false
 font-size = 22
 font-thicken = false
+font-feature = -calt
 
 fullscreen = false
+background-opacity = 1
+window-vsync = false
+window-theme = dark
 gtk-titlebar = false
-
-adjust-underline-position = 40%
-adjust-underline-thickness = -60%
 
 cursor-style = block
 cursor-style-blink = false
-
-shell-integration = bash
-shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
-# keybind = ctrl+d=new_split:right
-
-background-opacity = 1
-
-# window-width = 120
-# window-height = 45
-# window-padding-x = 4
+shell-integration = bash
+shell-integration-features = no-cursor 
 
 confirm-close-surface = false
 clipboard-paste-protection = false

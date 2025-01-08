@@ -8,6 +8,7 @@ hyprpaper &
 
 # network manager 
 nm-applet --indicator &
+blueman-applet &
 
 # idle daemon
 hypridle &
