@@ -1,7 +1,7 @@
-theme = GruvboxDarkHard 
-# Wez
-# "iTerm2 Default"
+theme =  Wez
 # "Tomorrow Night"
+# GruvboxDarkHard 
+# "iTerm2 Default"
 # catppuccin-mocha
 # "GitHub Dark"
 # "Monokai Remastered"
@@ -9,15 +9,14 @@ theme = GruvboxDarkHard
 font-family =
 font-style = false
 font-size = 22
-font-thicken = false
 font-feature = -calt
 
 fullscreen = false
 background-opacity = 1
 window-vsync = false
-window-theme = dark
 gtk-titlebar = false
 
+cursor-color = C8C8C8
 cursor-style = block
 cursor-style-blink = false
 mouse-hide-while-typing = true
