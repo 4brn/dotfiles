@@ -1,7 +1,3 @@
-vim.loader.enable()
-
-vim.g.have_nerd_font = true
-
-require 'config.options'
-require 'config.keymaps'
-require 'config.lazy'
+require("4brn.options")
+require("4brn.keymaps")
+require("4brn.lazy")
