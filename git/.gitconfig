@@ -1,21 +1,13 @@
 [user]
-	name = Aleksandar Rangelov
-	email = 4brn@proton.me 
+  name = Aleksandar Rangelov
+  email = 4brn@proton.me
 
 [color]
-	ui = auto
+  ui = auto
+
 [core]
-	editor = vim
-	autocrlf = input
-	safecrlf = true
+  editor = vim
+
 [init]
-	defaultBranch = main
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+  defaultBranch = main
 

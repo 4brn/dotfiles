@@ -1,4 +1,0 @@
-[[language]]
-name = "python"
-language-servers = ["ruff", "pylsp"]
-auto-format = false
