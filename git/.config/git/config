@@ -7,7 +7,14 @@
 
 [core]
   editor = vim
+  compression = 9
+  whitespace = error
+  preloadindes = true
 
 [init]
   defaultBranch = main
 
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all

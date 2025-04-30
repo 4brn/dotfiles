@@ -61,7 +61,7 @@
     "format": " {percent}%"
   },
   "hyprland/language": {
-    "format": "{small}",
+    "format": "{}",
     "format-en": "en",
     "format-bg": "bg",
   },
