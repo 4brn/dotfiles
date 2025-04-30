@@ -12,14 +12,13 @@ window#waybar {
     color: @fg4;
 }
 
+#workspaces button {
+    color: @fg4;
+}
+
 #workspaces button.active {
-    button {
-        color: @fg4;
-        .active {
-            background: @blue;
-            color: @bg_h;
-        }
-    }
+    background: @blue;
+    color: @bg_h;
 }
 
 #pulseaudio {
