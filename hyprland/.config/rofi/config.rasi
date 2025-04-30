@@ -1,0 +1,44 @@
+* {
+    font:   "Iosevka Nerd Font Mono 16";
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    location:   center;
+    width:      480;
+}
+
+inputbar {
+    spacing:    8px;
+    padding:    8px;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+
+textbox {
+    padding:            8px;
+}
+
+listview {
+    padding:    4px 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height:   false;
+}
+
+element {
+    padding:    8px;
+    spacing:    8px;
+}
+
+element-icon {
+    size:   0.8em;
+}
+

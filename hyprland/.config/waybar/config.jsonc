@@ -1,0 +1,72 @@
+{
+  "reload_style_on_change": true,
+  "position": "top",
+  // "height": 25,
+  "spacing": 25,
+  "modules-left": [
+    "hyprland/workspaces",
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "hyprland/language",
+    "backlight",
+    "pulseaudio",
+    // "network",
+    "battery",
+    "tray",
+  ],
+  "tray": {
+    "icon-size": 26,
+    "spacing": 15
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+                		"mode": "month",
+                		"format": {
+                    	    "months": "<b>{}</b>",
+                    	    "weekdays": "<b>{}</b>",
+                    	    "today": "<span color='#ffcc66'><b>{}</b></span>",
+                	}
+                },
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "on-click": "nm-applet"
+  },
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "format": " {percent}%"
+  },
+  "hyprland/language": {
+    "format": "{small}",
+    "format-en": "en",
+    "format-bg": "bg",
+  },
+  "hyprland/workspaces": {
+  "on-click": "activate",
+  "sort-by-number": true
+},
+ }

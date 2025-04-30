@@ -1,0 +1,64 @@
+@import "gruvbox.css";
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular";
+    font-size: 24px;
+    min-height: 0;
+    border: none;
+}
+
+window#waybar {
+    background: transparent;
+    color: @fg4;
+}
+
+#workspaces button.active {
+    button {
+        color: @fg4;
+        .active {
+            background: @blue;
+            color: @bg_h;
+        }
+    }
+}
+
+#pulseaudio {
+    color: @blue;
+}
+
+#network {
+    color: @yellow;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+    animation: bink 1s infinite;
+}
+
+#tray menu {
+    background: @bg_h;   
+}
+
+.modules-left>widget:first-child {
+    margin-left: 0;
+}
+
+.modules-right>widget:last-child {
+    margin-right: 0;
+}
+
+/* Animation for critical battery */
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @bg;
+    }
+}
