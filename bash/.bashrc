@@ -20,4 +20,8 @@ alias gb='git branch'
 alias gi='git init'
 alias gcl='git clone'
 
-PS1='\n\u@\h \W $ '
+PS1='\u@\h \W $ '
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
