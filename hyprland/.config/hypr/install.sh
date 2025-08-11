@@ -7,7 +7,9 @@ waybar \
 hypridle \
 dunst \
 network-manager-applet \
-blueman
+blueman \
+wl-clipboard # wayland clipboard manager
+
 
 # hyprpaper \
 # hyprshot

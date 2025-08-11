@@ -1,61 +1,85 @@
 {
   "reload_style_on_change": true,
+  "layer": "top",
   "position": "top",
-  // "height": 25,
-  "spacing": 25,
+  "height": 26,
+  "spacing": 16,
   "modules-left": [
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock"
   ],
   "modules-right": [
+    // "tray",
+    "cpu",
     "hyprland/language",
-    "backlight",
     "pulseaudio",
-    // "network",
     "battery",
-    "tray",
+    "bluetooth",
+    "network"
   ],
   "tray": {
     "icon-size": 26,
     "spacing": 15
   },
   "clock": {
-    "interval": 1,
-    "format": "{:%H:%M}",
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "calendar": {
-                		"mode": "month",
-                		"format": {
-                    	    "months": "<b>{}</b>",
-                    	    "weekdays": "<b>{}</b>",
-                    	    "today": "<span color='#ffcc66'><b>{}</b></span>",
-                	}
-                },
+    "format": "{:%A %H:%M}",
+    "format-alt": "{:%d %B W%V %Y}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "󰣙 ",
+    "on-click": "alacritty -e btop"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueberry"
   },
   "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging":    "{icon} {capacity}%",
+    "format-plugged":     " {capacity}%",
+    "format-icons": {
+      "charging": [
+        "󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "
+      ],
+      "default": [
+        "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+      ]
     },
-    "format": " {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "tooltip-format": "{time}"
+    "format-full": "󰂅 ",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "tooltip-format": "{ifname} via {gwaddr}",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "Disconnected",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    "on-click": "nm-applet"
+    "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+    "format" : "{icon}",
+    "format-wifi" : "{icon}",
+    "format-ethernet" : " ",
+    "format-disconnected" : "󰖪 ",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "nospacing": 1,
+    "on-click": "iwgtk"
   },
   "pulseaudio": {
     "format": "  {volume}%",
-    "on-click": "pavucontrol"
+    "format-muted": " ",
+    "on-click": "pavucontrol",
+    "tooltip": false
   },
   "backlight": {
     "format": " {percent}%"
@@ -63,10 +87,21 @@
   "hyprland/language": {
     "format": "{}",
     "format-en": "en",
-    "format-bg": "bg",
+    "format-bg": "bg"
   },
   "hyprland/workspaces": {
-  "on-click": "activate",
-  "sort-by-number": true
-},
- }
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "active": ""
+    },
+    "sort-by-number": true
+  }
+}
