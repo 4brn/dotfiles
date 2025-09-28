@@ -13,8 +13,8 @@ vim.o.background = "dark"
 
 -- Editing: Indentation
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.smarttab = true
 
 -- Editing: Auto-formatting
@@ -52,7 +52,7 @@ vim.opt.updatetime = 50
 vim.opt.timeoutlen = 250
 
 -- Special characters
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- System integration

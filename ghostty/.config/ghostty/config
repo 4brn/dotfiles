@@ -14,7 +14,7 @@ font-feature = -calt
 fullscreen = false
 background-opacity = 1
 window-vsync = false
-gtk-titlebar = false
+gtk-titlebar = true
 
 cursor-color = C8C8C8
 cursor-style = block
