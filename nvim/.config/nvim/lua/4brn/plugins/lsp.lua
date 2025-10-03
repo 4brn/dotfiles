@@ -92,7 +92,7 @@ return {
       })
 
       require("mason-tool-installer").setup({
-        ensure_installed = { "lua_ls", "stylua", "pico8_ls" },
+        ensure_installed = { "lua_ls", "stylua" },
       })
 
       require("mason-lspconfig").setup({

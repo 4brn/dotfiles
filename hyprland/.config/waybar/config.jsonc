@@ -24,8 +24,8 @@
     "spacing": 15
   },
   "clock": {
-    "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B W%V %Y}",
+    "format": "{:%d %H:%M}",
+    "format-alt": "{:%A %B W%V %Y}",
     "tooltip": false
   },
   "cpu": {
