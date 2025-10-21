@@ -55,5 +55,19 @@
   "notification_panel": {
     "button": false,
     "dock": "right"
+  },
+
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "analysis": {
+            "diagnosticMode": "workspace",
+            "inlayHints.callArgumentNames": false
+          },
+          "typeCheckingMode": "basic"
+        }
+      }
+    }
   }
 }
