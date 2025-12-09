@@ -1,20 +1,12 @@
 theme =  Wez
-# "Tomorrow Night"
-# GruvboxDarkHard
-# "iTerm2 Default"
-# catppuccin-mocha
-# "GitHub Dark"
-# "Monokai Remastered"
 
 font-family = JetBrainsMono Nerd Font
 font-style = false
 font-size = 14
 font-feature = -calt
 
-fullscreen = false
-background-opacity = 1
 window-vsync = false
-gtk-titlebar = true
+gtk-titlebar = false
 
 cursor-color = C8C8C8
 cursor-style = block
@@ -25,7 +17,7 @@ window-padding-x = 14
 window-padding-y = 14
 window-padding-balance = true
 
-shell-integration = zsh
+shell-integration = bash
 shell-integration-features = no-cursor
 
 confirm-close-surface = false

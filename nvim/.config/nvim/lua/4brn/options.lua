@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+-- System integration
+vim.opt.clipboard = "unnamedplus"
+
 -- UI: Line Numbering
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -54,8 +57,3 @@ vim.opt.timeoutlen = 250
 -- Special characters
 vim.opt.list = false
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
--- System integration
-vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
-end)
