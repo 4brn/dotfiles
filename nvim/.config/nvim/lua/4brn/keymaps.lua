@@ -1,69 +1,72 @@
-local set = function(mode, key, cmd, desc)
-  local opts = { noremap = true, silent = true }
-  if not desc == nil then
-    opts.desc = desc
-  end
-  vim.keymap.set(mode, key, cmd, opts)
-end
-
---- keymap.set('n', 'x', '_x', opts)
 
 -- Increment/Decrement
-set('n', '+', '<C-a>')
-set('n', '-', '<C-x>')
+-- set("n", "+", "<C-a>")
+-- set("n", "-", "<C-x>")
 
--- -- Split windows
-set('n', 'ss', ':split<Return>')
-set('n', 'sv', ':vsplit<Return>')
+-- Split windows
+vim.keymap.set("n", "<space>sh", ":split<Return>", {noremap = true, silent = true, desc = "Horizontal"})
+vim.keymap.set("n", "<space>sv", ":vsplit<Return>", {noremap = true, silent = true, desc = "Vertical"})
 
 -- Move Window
-set('n', '<C-h>', '<C-w>h')
-set('n', '<C-l>', '<C-w>l')
-set('n', '<C-j>', '<C-w>j')
-set('n', '<C-k>', '<C-w>k')
+vim.keymap.set("n", "<C-h>", "<C-w>h", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-l>", "<C-w>l", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-j>", "<C-w>j", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true, silent = true})
 
--- Nuke shift+q keymap
-set('n', 'Q', '<nop>')
-set({ 'n', 'v' }, '<Space>', '<nop>')
+vim.keymap.set("n", "Q", "<nop>", {noremap = true, silent = true}) -- Nuke shift+q keymap
+vim.keymap.set({ "n", "v" }, "<Space>", "<nop>", {noremap = true, silent = true})
 
 -- Lua execution
-set('n', '<space>lf', '<cmd>source %<Return>', 'file')
-set('n', '<space>lx', ':.lua<Return>', 'line')
-set('v', '<space>lx', ':.lua<Return>', 'selection')
+vim.keymap.set("n", "<space>o", ":update<CR> :source<CR>", {noremap = true, silent = true, desc = "Source"})
 
 -- Clear highlights
-set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {noremap = true, silent = true})
 
 -- Undo
-set('n', 'U', '<C-r>', 'undo')
+vim.keymap.set("n", "U", "<C-r>", {noremap = true, silent = true, desc = "Undo"})
 
 -- Oil
-set('n', '-', ':Oil<CR>', 'oil')
+vim.keymap.set("n", "-", ":Oil<CR>", {noremap = true, silent = true, desc = "Oil"})
 
 -- Quickfix list
-set('n', '<M-j>', ':cnext<CR>', 'next')
-set('n', '<M-k>', ':cprevious<CR>', 'prev')
+vim.keymap.set("n", "<M-j>", ":cnext<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<M-k>", ":cprevious<CR>", {noremap = true, silent = true})
 
 -- Move selected lines with shift+j or shift+k
-set('v', 'J', ":m '>+1<CR>gv=gv")
-set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {noremap = true, silent = true})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {noremap = true, silent = true})
 
 -- Terminal
-set('t', '<Esc><Esc>', '<C-\\><C-n>', 'exit')
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
 
 -- Ctrl-V visual editing
-set('i', '<C-c>', '<Esc>')
+vim.keymap.set("i", "<C-c>", "<Esc>", {noremap = true, silent = true})
 
 -- Center highlight on screen
-set('n', '<C-d>', '<C-d>zz')
-set('n', '<C-u>', '<C-u>zz')
-set('n', 'n', 'nzzzv')
-set('n', 'N', 'Nzzzv')
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {noremap = true, silent = true})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {noremap = true, silent = true})
+vim.keymap.set("n", "n", "nzzzv", {noremap = true, silent = true})
+vim.keymap.set("n", "N", "Nzzzv", {noremap = true, silent = true})
+
+-- Function to reindent and preserve cursor position
+local function reindent()
+  local line = vim.fn.line('.')  -- Save current line number
+  vim.cmd('%s/\\s\\+$//e')        -- Remove trailing whitespace
+  vim.cmd('normal! gg=G')        -- Reindent entire buffer
+  vim.fn.cursor(line, 1)         -- Move back to the original line
+end
+
+-- Auto-command to call the function before saving
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = reindent,
+})
+
 
 -- Highlight on yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,

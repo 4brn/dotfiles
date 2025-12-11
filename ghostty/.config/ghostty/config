@@ -1,12 +1,13 @@
 theme =  Wez
 
-font-family = JetBrainsMono Nerd Font
+font-family = IosevkaTerm Nerd Font Mono
 font-style = false
-font-size = 14
+font-size = 20
 font-feature = -calt
 
 window-vsync = false
-gtk-titlebar = false
+gtk-titlebar = true
+maximize = true
 
 cursor-color = C8C8C8
 cursor-style = block

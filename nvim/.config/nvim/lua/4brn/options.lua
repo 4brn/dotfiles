@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- System integration
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append("unnamedplus")
 
 -- UI: Line Numbering
 vim.opt.number = true
@@ -11,13 +11,23 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 8
 vim.opt.termguicolors = true
 vim.o.background = "dark"
+
+vim.opt.winborder = "rounded"
+vim.opt.colorcolumn = ""
+vim.opt.showmode = false
+vim.opt.winblend = 0
+vim.opt.autoread = true
+vim.opt.iskeyword:append("-")
+vim.opt.cursorline = false
 
 -- Editing: Indentation
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.smarttab = true
 
 -- Editing: Auto-formatting
@@ -28,7 +38,7 @@ vim.opt.formatoptions:append({ "r" })
 
 -- Editing: Input behavior
 vim.opt.backspace = { "start", "eol", "indent" }
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
 -- Search and replace
 vim.o.hlsearch = true
@@ -40,6 +50,7 @@ vim.opt.inccommand = "split"
 -- File operations
 vim.opt.backup = false
 vim.opt.undofile = true
+vim.opt.swapfile = false
 
 -- File navigation
 vim.opt.path:append({ "**" })
@@ -53,7 +64,3 @@ vim.opt.splitkeep = "cursor"
 -- Performance
 vim.opt.updatetime = 50
 vim.opt.timeoutlen = 250
-
--- Special characters
-vim.opt.list = false
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
