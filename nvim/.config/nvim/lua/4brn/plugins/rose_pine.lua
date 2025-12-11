@@ -9,6 +9,12 @@ return {
         italic = false,
         transparency = true,
       },
+      groups = {
+        git_add = "#069C56",
+        git_change = "#FF980E",
+        git_delete = "#D3212C",
+        git_untracked = "#D0CCCB",
+      },
     })
     vim.cmd.colorscheme("rose-pine")
 

@@ -6,7 +6,7 @@
   ui = auto
 
 [core]
-  editor = vim
+  editor = nvim
   compression = 9
   whitespace = error
   preloadindes = true

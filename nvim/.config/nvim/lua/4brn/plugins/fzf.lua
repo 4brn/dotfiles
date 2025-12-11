@@ -12,11 +12,7 @@ return {
         }
       },
       files = {
-        hidden = false,
-        fzf_opts = {
-          -- ['--exact'] = "",
-          -- ['--no-sort'] = "",
-        }
+        hidden = true,
       }
     })
 
@@ -26,9 +22,9 @@ return {
     keymap.set("n", "<leader>fg", fzf.grep, { noremap = true, silent = true, desc = "Grep" })
     keymap.set("n", "<leader>f/", fzf.live_grep, { noremap = true, silent = true, desc = "Live Grep" })
     keymap.set("n", "<leader>ff", fzf.files, { noremap = true, silent = true, desc = "Files" })
+    keymap.set("n", "<leader>f?", fzf.files, { noremap = true, silent = true, desc = "Everything" })
     keymap.set("n", "<leader>fn", function()
       fzf.files({ cwd = vim.fn.stdpath("config") })
-    end, { noremap = true, silent = true, desc = "Neovim Config" })
-    keymap.set("n", "<leader>f?", fzf.files, { noremap = true, silent = true, desc = "Everything" })
+    end, { noremap = true, silent = true, desc = "Config" })
   end,
 }

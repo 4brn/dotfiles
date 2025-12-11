@@ -16,9 +16,6 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", {noremap = true, silent = true})
 vim.keymap.set("n", "Q", "<nop>", {noremap = true, silent = true}) -- Nuke shift+q keymap
 vim.keymap.set({ "n", "v" }, "<Space>", "<nop>", {noremap = true, silent = true})
 
--- Lua execution
-vim.keymap.set("n", "<space>o", ":update<CR> :source<CR>", {noremap = true, silent = true, desc = "Source"})
-
 -- Clear highlights
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {noremap = true, silent = true})
 

@@ -17,8 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    "tpope/vim-sleuth",
-    { import = "4brn.plugins" },
+    {import = "4brn.plugins" },
   },
   checker = {
     enabled = false,
