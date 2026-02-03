@@ -6,8 +6,8 @@ font-size = 20
 font-feature = -calt
 
 window-vsync = false
-gtk-titlebar = true
-maximize = true
+gtk-titlebar = false
+maximize = false
 
 cursor-color = C8C8C8
 cursor-style = block

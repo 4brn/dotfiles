@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 vim.o.background = "dark"
 
 vim.opt.winborder = "rounded"
-vim.opt.colorcolumn = ""
+vim.opt.colorcolumn = "80"
 -- vim.opt.showmode = false
 vim.opt.winblend = 0
 vim.opt.autoread = true

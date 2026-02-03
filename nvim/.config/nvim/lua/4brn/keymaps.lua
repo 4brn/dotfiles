@@ -20,7 +20,7 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<nop>", {noremap = true, silent = true}
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {noremap = true, silent = true})
 
 -- Undo
-vim.keymap.set("n", "U", "<C-r>", {noremap = true, silent = true, desc = "Undo"})
+-- vim.keymap.set("n", "U", "<C-r>", {noremap = true, silent = true, desc = "Undo"})
 
 -- Oil
 vim.keymap.set("n", "-", ":Oil<CR>", {noremap = true, silent = true, desc = "Oil"})
@@ -53,18 +53,20 @@ local function reindent()
   vim.fn.cursor(line, 1)         -- Move back to the original line
 end
 
+vim.keymap.set("n", "<space>g", function() reindent() end, {noremap = true, silent = true, desc = "Reindent"})
+
 -- Auto-command to call the function before saving
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = reindent,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+  --   pattern = "*",
+  --   callback = reindent,
+  -- })
 
 
--- Highlight on yank
-vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
+  -- Highlight on yank
+  vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+      vim.highlight.on_yank()
+    end,
+  })
