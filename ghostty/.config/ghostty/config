@@ -2,7 +2,7 @@ theme =  Wez
 
 font-family = IosevkaTerm Nerd Font Mono
 font-style = false
-font-size = 20
+font-size = 16
 font-feature = -calt
 
 window-vsync = false

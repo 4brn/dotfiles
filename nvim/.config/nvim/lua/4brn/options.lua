@@ -15,6 +15,10 @@ vim.opt.sidescrolloff = 8
 vim.opt.termguicolors = true
 vim.o.background = "dark"
 
+-- Diagnostics
+vim.diagnostic.enable(false)
+vim.diagnostic.config({ virtual_text = false })
+
 vim.opt.winborder = "rounded"
 vim.opt.colorcolumn = "80"
 -- vim.opt.showmode = false
